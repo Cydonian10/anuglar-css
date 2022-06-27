@@ -1,0 +1,27 @@
+.navigation {
+  height: calc(100vh - 25px);
+  @apply rounded-xl p-4 bg-slate-800 overflow-y-auto;
+  @apply hidden md:block md:sticky w-full top-2;
+  @apply text-white;
+  @apply md:col-span-3;
+}
+.header {
+  @apply h-16 bg-indigo-800 rounded-xl sticky;
+  @apply flex items-center justify-between px-4 text-white;
+  ul {
+    @apply flex h-full items-center;
+  }
+  li {
+    @apply h-full px-4 flex items-center rounded-md;
+    @apply hover:bg-indigo-600;
+    transition: background 0.5s ease;
+    line-height: 0;
+  }
+  .menu {
+    @apply flex md:hidden;
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

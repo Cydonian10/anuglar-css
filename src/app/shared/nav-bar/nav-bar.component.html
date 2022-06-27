@@ -1,0 +1,23 @@
+<div [class.mat-elevation-z10]="true" class="nav">
+  <div>Logo</div>
+  <div class="flex items-center input bg-white px-2 py-1 rounded-md active:border-2">
+    <input class="text-gray-800 outline-none" [formControl]="search" type="text" />
+    <button (click)="getSearch()">
+      <mat-icon class="text-black">search</mat-icon>
+    </button>
+  </div>
+  <ul>
+    <li (click)="toogle()" matRipple class="menu">
+      <p>
+        adf
+      </p>
+      <mat-icon class="ml-1">menu</mat-icon>
+    </li>
+    <li matRipple>
+      <a class="block" href="#">nota</a>
+    </li>
+    <li matRipple>
+      <a class="block" href="#">face</a>
+    </li>
+  </ul>
+</div>

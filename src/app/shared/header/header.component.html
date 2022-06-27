@@ -1,0 +1,19 @@
+<div class="grid grid-cols-1 md:grid-cols-12 gap-3 p-2">
+  <!-- ! navigation -->
+  <div class="col-span-3">
+    <app-navigation [genders]="genders"></app-navigation>
+  </div>
+
+  <div class="col-span-9 h-full">
+    <!--! nav-bar -->
+    <app-nav-bar (onToogle)="toogle()"></app-nav-bar>
+
+    <!-- !Container -->
+    <div class="container m-auto p-4">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <!-- !menu mobile -->
+  <app-navigation [mobile]="true" [show]="show" [genders]="genders"></app-navigation>
+</div>

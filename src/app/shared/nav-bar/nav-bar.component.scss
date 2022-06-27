@@ -1,0 +1,20 @@
+.nav {
+  @apply h-16 bg-indigo-800 rounded-xl sticky;
+  @apply flex items-center justify-between px-4 text-white;
+  ul {
+    @apply flex h-full items-center;
+  }
+  li {
+    @apply h-full px-4 flex items-center rounded-md;
+    @apply hover:bg-indigo-600;
+    transition: background 0.5s ease;
+    line-height: 0;
+  }
+  .menu {
+    @apply flex md:hidden;
+  }
+}
+
+.input {
+  line-height: 0;
+}

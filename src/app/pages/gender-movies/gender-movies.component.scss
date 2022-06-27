@@ -1,0 +1,12 @@
+@import "/src/scss/buttons.scss";
+
+.card {
+  opacity: 0;
+  transform: translateX(-25px) scale(0.8);
+  transition: 0.7s ease-in-out;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}

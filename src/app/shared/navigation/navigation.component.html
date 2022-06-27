@@ -1,0 +1,35 @@
+<div class="navigation" [class.mat-elevation-z10]="true" [ngClass]="{show,mobile}">
+  <ul class="list">
+    <li class="list_item list_item-click">
+      <div matRipple appLinkList class="list_button list_button-click">
+        <div class="item">
+          <mat-icon>home</mat-icon>
+          <div class="item">Categorias</div>
+        </div>
+        <mat-icon class="list_arrow">chevron_right</mat-icon>
+      </div>
+
+      <!-- ! list of genders -->
+      <ul class="list_show">
+        <li
+          class="list_inside"
+          *ngFor="let g of genders | slice:0:14"
+          [routerLink]="['movie-by-gender',g.id,g.name]"
+          routerLinkActive="router-link-active"
+        >
+          <p class="bg-indigo-500 w-3 h-3 rounded-"></p>
+          <a class="nav_link nav_link--inside">{{g.name}}</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="list_item">
+      <div matRipple routerLink="/" class="list_button">
+        <div class="item">
+          <mat-icon>inventory</mat-icon>
+          <a class="item"> Inicio </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

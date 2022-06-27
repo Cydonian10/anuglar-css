@@ -1,0 +1,86 @@
+.navigation {
+  height: calc(100vh - 25px);
+  @apply rounded-xl p-4 bg-slate-800 overflow-y-auto;
+  @apply hidden md:block md:sticky w-full top-2;
+  @apply text-white;
+  @apply md:col-span-3;
+}
+
+.nav_link {
+  display: block;
+  padding: 10px 8px;
+}
+
+.list {
+  width: 100%;
+  @apply flex flex-col items-center;
+}
+
+.nav_link--inside {
+  @apply rounded-md text-white pl-5 w-full;
+}
+.nav_link--inside:hover {
+  @apply hover:bg-slate-700;
+}
+
+.list_item {
+  width: 100%;
+  overflow: hidden;
+  &-click {
+    cursor: pointer;
+  }
+  .item {
+    @apply flex items-center;
+    a {
+      margin-top: 5px;
+    }
+    mat-icon {
+      @apply mr-4;
+    }
+  }
+}
+
+.list_button {
+  @apply m-auto flex justify-between items-center w-11/12;
+  @apply rounded-md px-3 py-3 mb-1;
+
+  transition: background 0.4s ease;
+  &:hover {
+    @apply hover:bg-slate-700;
+  }
+}
+.list_inside {
+  @apply ml-5;
+  @apply flex items-center;
+}
+
+.draw .list_arrow {
+  transform: rotate(90deg);
+}
+
+.list_arrow {
+  margin-left: 20px;
+  transition: transform 0.3s;
+}
+
+.list_show {
+  @apply m-auto w-11/12 border-l-4 border-gray-700 bg-slate-700 rounded-md;
+  transition: height 0.4s;
+  height: 0;
+}
+
+//mobile
+
+.mobile {
+  @apply fixed block md:hidden w-[300px] mt-3;
+  opacity: 0;
+  transform: translateX(-320px);
+
+  transition: all 0.5s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease;
+}

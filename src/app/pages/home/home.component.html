@@ -1,0 +1,12 @@
+<app-spiner></app-spiner>
+
+<div class="grid grid-cols-5 gap-4">
+  <div
+    class="card rounded-md overflow-hidden cursor-pointer"
+    [class.mat-elevation-z10]="true"
+    *ngFor="let item of movies$ | async"
+    appObserver
+  >
+    <img [src]="item.poster_path" alt="image" />
+  </div>
+</div>
